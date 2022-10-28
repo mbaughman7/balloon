@@ -1,9 +1,19 @@
 <h4>SENSORS</h4> 
 barometric
-temperature (inside and outside box)
+temperature (inside and outside box) [https://www.adafruit.com/product/1782 accurate down to -50] [https://www.adafruit.com/product/372 good down to -55C (-67F)] 
 humidity
 elevation
 radiation (solar rays)
 UV (https://www.adafruit.com/product/3964) -- how to keep sensor warm enough to work but still exposed to the UV light? Maybe enclosed except for tiny hole for sensor on board...
 
 
+<h4>GPS</h4>
+put ublox module link here.  Will also double as altimeter.
+
+<h4>SIM module?</h4>
+Do we need a SIM module?  
+SIM7000A 
+Backup GPS once on ground
+
+<h4>Brain</h4>
+Rugged-Circuits Mega-ET
