@@ -1,0 +1,9 @@
+<h4>SENSORS</h4> 
+barometric
+temperature (inside and outside box)
+humidity
+elevation
+radiation (solar rays)
+UV (https://www.adafruit.com/product/3964) -- how to keep sensor warm enough to work but still exposed to the UV light? Maybe enclosed except for tiny hole for sensor on board...
+
+
