@@ -8,7 +8,7 @@ UV (https://www.adafruit.com/product/3964) -- how to keep sensor warm enough to 
 
 
 GPS
-put ublox module link here.  Will also double as altimeter.
+put ublox module link here.  Will also double as altimeter.  Ublox breakout hard to find locally.  
 
 SIM MODULE
 Do we need a SIM module?  
@@ -23,3 +23,9 @@ CAMERA
 BALOON
 
 PARACHUTE
+
+OPTIONAL LONG RANGE RADIO MODULE
+
+https://www.digikey.com/en/products/detail/digi/XBP9B-DPST-001/3594160?utm_adgroup=RF%20Transceiver%20Modules&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_RF%2FIF%20and%20RFID_NEW&utm_term=&utm_content=RF%20Transceiver%20Modules&gclid=Cj0KCQjw--2aBhD5ARIsALiRlwDs37bCvm1PdolumwN6vWcIAQ4q0ilGx1DAKsXRnhdwypRvKQlfF7caAopqEALw_wcB
+has 4 to 9 miles line of sight
+
