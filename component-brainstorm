@@ -1,25 +1,52 @@
-SENSORS
-barometric
-temperature (inside and outside box) [https://www.adafruit.com/product/1782 accurate down to -50] [https://www.adafruit.com/product/372 good down to -55C (-67F)] 
-humidity
-elevation
-radiation
-UV (https://www.adafruit.com/product/3964) -- how to keep sensor warm enough to work but still exposed to the UV light? Maybe enclosed except for tiny hole for sensor on board...
+#############
+## SENSORS ##
+#############
 
+Barometric - https://www.parallax.com/product/altimeter-module-ms5607/
 
-GPS
-put ublox module link here.  Will also double as altimeter.
+Temperature (inside and outside box) - [https://www.adafruit.com/product/1782 accurate down to -50] 
+                                       [https://www.adafruit.com/product/372 good down to -55C (-67F)] 
 
-SIM MODULE
-Do we need a SIM module?  
-SIM7000A 
-Backup GPS once on ground
+UV (https://www.adafruit.com/product/3964) 
+   -- how to keep sensor warm enough to work but still exposed to the UV light? 
+   Maybe enclosed except for tiny hole for sensor on board...
 
-BRAIN
-Rugged-Circuits Mega-ET
+Humidity - FUTURE projects
 
-CAMERA
+Radiation - FUTURE projects
 
-BALOON
+Wind speed - FUTURE projects
 
-PARACHUTE
+Gas analysis - FUTURE projects
+
+##############
+## HARDWARE ##
+##############
+
+# GPS (Will also double as altimeter.)
+  SparkFun - https://www.sparkfun.com/products/14414#reviews
+  ublox - https://v3.airspy.us/product/upu-ublox-m8-pico/  
+  backup Spot Trace - https://www.findmespot.com/en-us/products-services/spot-trace
+
+# SIM MODULE (Backup GPS once on ground) - SIM7000A 
+
+# LoRa
+
+# APRS
+
+# BRAIN - Rugged-Circuits Mega-ET
+
+# SD Module - Adafruit (same as on squawkBox)
+
+# CAMERA - Clinton's GoPro Hero
+
+# BALOON - https://www.kaymont.com/shop OR
+           https://www.highaltitudescience.com/collections/all
+
+# PARACHUTE - https://the-rocketman.com/recovery-html/
+
+# Radar Deflector - Made by hand
+
+# Passive anti-spinning mechanism
+
+# Helium
