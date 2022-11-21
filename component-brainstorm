@@ -3,6 +3,7 @@
 #############
 
 Barometric - https://www.parallax.com/product/altimeter-module-ms5607/
+             https://www.digikey.com/en/products/detail/parallax-inc./29124/3083205?utm_adgroup=Evaluation%20Boards%20-%20Sensors&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Development%20Boards%2C%20Kits%2C%20Programmers_NEW&utm_term=&utm_content=Evaluation%20Boards%20-%20Sensors&gclid=Cj0KCQiA99ybBhD9ARIsALvZavXuEnDGySGhKYbrb3l-6a_VXQYlSx2cgxVhf0j91XK4zpoiJZTWGokaAh6eEALw_wcB
 
 Temperature (inside and outside box) - [https://www.adafruit.com/product/1782 accurate down to -50] 
                                        [https://www.adafruit.com/product/372 good down to -55C (-67F)] 
