@@ -5,10 +5,17 @@ The balloon will have an altitude goal of 100,000 feet.  It will follow all appl
 It will measure altitude, barometric pressure, humidity, temperature, UV radiation, ..... to be continued
 
 ## Project LINKS
-  - https://launchwithus.com/lwu-blog/2016/01/21/high-altitude-weather-balloon-laws-and-regulations
+
+  Radar Reflectors
   - https://www.overlookhorizon.com/how-to-launch-weather-balloons/radar-reflectors/
+  
+  Performance Calculator
   - https://www.highaltitudescience.com/pages/balloon-performance-calculator
+  
+  Air Space
   - https://skyvector.com/
+  
+  Trajectory Planning
   - http://weather.uwyo.edu/upperair/balloon_traj.html
   - https://predict.sondehub.org
   
