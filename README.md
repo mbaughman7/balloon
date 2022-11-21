@@ -14,7 +14,11 @@ It will measure altitude, barometric pressure, humidity, temperature, UV radiati
   
   Laws & Regulations
   - https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-101
+  - https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-22/subpart-H/section-22.925
   
  ## Tutorial / Educational LINKS
   - https://untamedscience.com/blog/gopro-to-space/
   - https://www.sparkfun.com/tutorials/180
+  - https://launchwithus.com/lwu-blog/2016/01/21/high-altitude-weather-balloon-laws-and-regulations
+  - https://stilldavid.com/habfaq/
+  - http://www.eoss.org/
