@@ -1,2 +1,2 @@
 # Hardware Documentation
-Storage for all hadrware documentation 
+Storage for all hardware documentation 
