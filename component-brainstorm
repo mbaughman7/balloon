@@ -8,7 +8,7 @@ Barometric - https://www.parallax.com/product/altimeter-module-ms5607/
 Temperature (inside and outside box) - [https://www.adafruit.com/product/1782 accurate down to -50] 
                                        [https://www.adafruit.com/product/372 good down to -55C (-67F)] 
 
-UV (https://www.adafruit.com/product/3964) 
+UV https://www.adafruit.com/product/1918
    -- how to keep sensor warm enough to work but still exposed to the UV light? 
    Maybe enclosed except for tiny hole for sensor on board...
 
@@ -41,7 +41,7 @@ Gas analysis - FUTURE projects
 
 # CAMERA - Clinton's GoPro Hero
 
-# BALOON - https://www.kaymont.com/shop OR
+# BALLOON - https://www.kaymont.com/shop OR
            https://www.highaltitudescience.com/collections/all
 
 # PARACHUTE - https://the-rocketman.com/recovery-html/
