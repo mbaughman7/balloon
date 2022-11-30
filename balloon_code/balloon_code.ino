@@ -1,11 +1,14 @@
 #include "temperatureSensor.h"
 #include "MSbarometer.h"
+#include "uvSensor.h"
 
 int interior_sensor = A0;
 int exterior_sensor = A1;
+int uv_sensor = A2;
 float interior_temperature;
 float exterior_temperature;
 float altitude;
+int uv_value;
 
 void setup() {
   Serial.begin(9600);
@@ -24,6 +27,7 @@ void loop() {
   altitude = getAltitude();
   Serial.print("Altitude is: ");
   Serial.println(altitude);
+  uv_value = readUV(uv_sensor);
   Serial.println("");
   delay(1000);
 
@@ -34,6 +38,7 @@ void loop() {
    *   interior_temperature = readTemperature(interior_sensor);
    *   exterior_temperature = readTemperature(exterior_sensor);
    *   altitude = getAltitude();
+   *   uv_value = readUV(uv_sensor);
    *   SaveAllThisStuffToSD();
    */
 
