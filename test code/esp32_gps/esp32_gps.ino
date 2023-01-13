@@ -1,27 +1,3 @@
-/*
-  Reading Lat/Long from the Qwiic GPS module over I2C
-  By: Nathan Seidle
-  SparkFun Electronics
-  Date: April 12th, 2017
-  License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware license).
-
-  This example shows date, time and location.
-
-  You will need two libraries:
-  1) Use library manager to search for and install: 'SparkFun I2C GPS Arduino Library'
-  2) Download and install the zip library from https://github.com/mikalhart/TinyGPSPlus
-
-  The TitanX1 has a buffer of approximately 1,000 NMEA characters. If you don't poll the module
-  for a few seconds this buffer will fill up. The first time you read from the GPS module you will
-  receive this large buffer and may take up to 800ms to clear out the contents. After that it will
-  take approximately 20ms to read the contents of the I2C buffer from the module.
-
-  Hardware Connections:
-  Attach a Qwiic shield to your RedBoard or Uno.
-  Plug the Qwiic sensor into any port.
-  Serial.print it out at 115200 baud to serial monitor.
-*/
-
 #include <SparkFun_I2C_GPS_Arduino_Library.h>  //Use Library Manager or download here: https://github.com/sparkfun/SparkFun_I2C_GPS_Arduino_Library
 #include <TinyGPS++.h>                         //From: https://github.com/mikalhart/TinyGPSPlus
 #include <Adafruit_Sensor.h>
@@ -31,9 +7,9 @@
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
-I2CGPS myI2CGPS;  //Hook object to the library
-TinyGPSPlus gps;  //Declare gps object
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+I2CGPS myI2CGPS;  
+TinyGPSPlus gps;  
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1); //set up built-in oled screen on wemos lolin32
 
 
 void setup() {
@@ -41,11 +17,12 @@ void setup() {
   Serial.println("esp32 with screen and gps");
   Wire.begin(5, 4);
   if (myI2CGPS.begin() == false) {
-    Serial.println("Module failed to respond. Please check wiring.");
+    Serial.println("No GPS module found.");
     while (1)
       ;  //Freeze!
   }
   Serial.println("GPS module found!");
+
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C, false, false)) {
     Serial.println(F("SSD1306 allocation failed"));
     for (;;)
@@ -113,6 +90,23 @@ void displayInfo() {
     display.display();
   } else {
     Serial.println(F("Location not yet valid"));
+  }
+
+    if (gps.altitude.isValid())
+  {
+    Serial.print(F("Altitude Meters:"));
+    Serial.print(gps.altitude.meters());
+    Serial.print(F(" Feet:"));
+    Serial.print(gps.altitude.feet());
+    display.print(gps.altitude.feet());
+    display.print("ft");
+    display.display();
+  }
+
+  if (gps.satellites.isValid())
+  {
+    Serial.print(F(" Satellites in View:"));
+    Serial.print(gps.satellites.value());
   }
 }
 
