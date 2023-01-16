@@ -1,6 +1,7 @@
 #include "temperatureSensor.h"
 #include "MSbarometer.h"
 #include "uvSensor.h"
+#include "gps.h"
 
 int interior_sensor = A0;
 int exterior_sensor = A1;
@@ -15,6 +16,7 @@ void setup() {
   Serial.println("This is balloon code with interior/exterior temps and barometer.");
   Serial.println("The barometer has not been tested yet, and the temp sensors are just simulated until combined with known-value resistor");
   initialize_barometer();
+  initialize_gps();
 }
 
 void loop() {
@@ -29,6 +31,7 @@ void loop() {
   Serial.println(altitude);
   uv_value = readUV(uv_sensor);
   Serial.println("");
+  display_gps();
   delay(1000);
 
   /*when ready, the main loop can get rid of serial prints and 
