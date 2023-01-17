@@ -20,12 +20,7 @@ void setup() {
 }
 
 void loop() {
-  interior_temperature = readTemperature(interior_sensor);
-  Serial.print("Interior temperature is: ");
-  Serial.println(interior_temperature);
-  exterior_temperature = readTemperature(exterior_sensor);
-  Serial.print("Exterior temperature is: ");
-  Serial.println(exterior_temperature);
+
   altitude = getAltitude();
   Serial.print("Altitude is: ");
   Serial.println(altitude);
