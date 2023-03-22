@@ -25,8 +25,11 @@ void loop() {
   Serial.print("Altitude is: ");
   Serial.println(altitude);
   uv_value = readUV(uv_sensor);
+  Serial.print("UV value is: ");
+  Serial.println(uv_value);
   Serial.println("");
   display_gps();
+  Serial.println("");
   delay(1000);
 
   /*when ready, the main loop can get rid of serial prints and 

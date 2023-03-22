@@ -1,4 +1,3 @@
-
 #include "MSbarometer.h"
 #include <Arduino.h>
 #include <SPI.h>
