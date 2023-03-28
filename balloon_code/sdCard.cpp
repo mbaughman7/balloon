@@ -1,4 +1,5 @@
 #include <SD.h>
+#include <MemoryFree.h>
 
 
 void Initialize_SDcard() {
@@ -27,10 +28,10 @@ void write_to_SD(double lat, double longitude, double sats, double speed, double
   if (dataFile) {
 
 
-    dataFile.print(lat);
+    dataFile.print(String(lat,6));
     dataFile.print(",");
 
-    dataFile.print(longitude);
+    dataFile.print(String(longitude,6));
     dataFile.print(",");
 
 
@@ -47,7 +48,7 @@ void write_to_SD(double lat, double longitude, double sats, double speed, double
 
     dataFile.println();  //End of Row move to next row
     dataFile.close();    //Close the file
-
+    Serial.print(freeMemory());
   } else
     Serial.println("SD card writing failed");
 }

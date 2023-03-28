@@ -3,6 +3,7 @@
 #include "uvSensor.h"
 #include "gps.h"
 #include "sdCard.h"
+#include <MemoryFree.h>
 
 int interior_sensor = A0;
 int exterior_sensor = A1;
@@ -38,7 +39,7 @@ void loop() {
   Serial.println(uv_value);
   Serial.println("Now saving to SD card...");
   write_to_SD(lat,longitude,sats,speed,gps_altitude,uv_value);
-
+  Serial.print(freeMemory());
   // display_gps();
   Serial.println("");
   delay(15000);

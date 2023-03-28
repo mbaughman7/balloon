@@ -1,6 +1,6 @@
 #ifndef ACCTEMP_H
 #define ACCTEMP_H
 
-void displayTemp();
+void getAccTemp();
 
 #endif
