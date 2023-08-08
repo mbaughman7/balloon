@@ -46,6 +46,12 @@ void loop() {
     previousMillis = currentMillis;  // Save the current time
 
     Serial.println("Now saving to SD card...");
+    Serial.print("lat: ");
+    Serial.println(lat,6);
+    Serial.print("long: ");
+    Serial.println(longitude,6);
+    Serial.print("altitude: ");
+    Serial.println(gps_altitude);
     write_to_SD(lat, longitude, sats, speed, gps_altitude, uv_value);
     Serial.print(freeMemory());
     Serial.println("");
