@@ -19,7 +19,7 @@ double speed;
 int uv_value;
 
 unsigned long previousMillis = 0;  // Stores the last time the loop was executed
-const long interval = 15000;       // Interval at which to take readings (milliseconds)
+const long interval = 1000;       // shorter interval than the main balloon code
 
 void setup() {
   Serial.begin(9600);
