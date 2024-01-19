@@ -12,7 +12,7 @@ void Initialize_SDcard() {
   File dataFile = SD.open("BALL1.txt", FILE_WRITE);
 
   if (dataFile) {
-    dataFile.println("latitude,longitude,satellites,speed,gps_altitude,UV");  //Write the first row of the csv
+    dataFile.println("latitude,longitude,satellites,speed,gps_altitude,UV,accTemp");  //Write the first row of the csv
     dataFile.close();
     Serial.println("successfully opened and primed SD card file");
   } else {
@@ -20,7 +20,7 @@ void Initialize_SDcard() {
   }
 }
 
-void write_to_SD(double lat, double longitude, double sats, double speed, double gps_altitude,int uv) {
+void write_to_SD(double lat, double longitude, double sats, double speed, double gps_altitude, int uv, float accTemp) {
 
   File dataFile = SD.open("BALL1.txt", FILE_WRITE);
 
@@ -45,6 +45,9 @@ void write_to_SD(double lat, double longitude, double sats, double speed, double
     dataFile.print(",");
 
     dataFile.print(uv);
+    dataFile.print(",");
+
+    dataFile.print(accTemp);
 
     dataFile.println();  //End of Row move to next row
     dataFile.close();    //Close the file

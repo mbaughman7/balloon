@@ -2,6 +2,6 @@
 #define ACCTEMP_H
 
 void initialize_accTemp();
-double getAccTemp();
+float getAccTemp();
 
 #endif

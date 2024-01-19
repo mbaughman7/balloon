@@ -3,6 +3,7 @@
 #include "uvSensor.h"
 #include "gps.h"
 #include "sdCard.h"
+#include "accTemp.h"
 #include <MemoryFree.h>
 
 int interior_sensor = A0;
@@ -10,6 +11,7 @@ int exterior_sensor = A1;
 int uv_sensor = A2;
 float interior_temperature;
 float exterior_temperature;
+float accTempF;
 double gps_altitude;
 double lat;
 double longitude;
@@ -26,7 +28,7 @@ void setup() {
   Serial.println("This is balloon code displaying GPS and UV sensor data to the serial monitor. All values are also saved to variables to be saved to the SD card for logging in the future.");
   initialize_barometer();  // this barometer is the MS5607 high altitude, high precision barometer. As of this version, we ain't got one yet. This is just here for the future.
   Initialize_SDcard();
-
+  initialize_accTemp();
   initialize_gps();
 }
 
@@ -40,6 +42,7 @@ void loop() {
   longitude = get_long();
   sats = get_sats();
   uv_value = readUV(uv_sensor);
+  accTempF = getAccTemp();
 
   // Check if it's time to take readings
   if (currentMillis - previousMillis >= interval) {
@@ -52,8 +55,11 @@ void loop() {
     Serial.println(longitude,6);
     Serial.print("altitude: ");
     Serial.println(gps_altitude);
-    write_to_SD(lat, longitude, sats, speed, gps_altitude, uv_value);
+    Serial.print("Super duper accurate temperature in F: ");
+    Serial.println(accTempF);
+    write_to_SD(lat, longitude, sats, speed, gps_altitude, uv_value, accTempF);
     Serial.print(freeMemory());
+    Serial.println("");
     Serial.println("");
   }
 }
